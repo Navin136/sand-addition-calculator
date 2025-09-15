@@ -1,0 +1,27 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-color: lightcyan;
+}
+h1{
+    text-align: center;
+    color: blue;
+    background-color: lightgray;
+}
+div#com{
+    margin: 20px 40px;
+    display: flex;
+}
+input{
+    margin-top: 10px;
+    height: 30px;
+    text-align: center  ;
+}
+table{
+    width: 90%;
+}
+th{
+    text-wrap: wrap;
+}

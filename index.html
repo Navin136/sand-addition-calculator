@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sand calculation</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <h1>SF3 SAND ADDITIVE PRE CALCULATION</h1>
+    <div id="com">
+        <div>
+            <label for="chamberheight">Machine chamber height</label>
+            <input id="chamberheight" name="chamberheight" value="550">
+        </div>
+        <div>
+            <label for="chamberwidth">Machine chamber width</label>
+            <input id="chamberwidth" name="chamberwidth" value="675">
+        </div>
+        <div>
+            <label for="batchwt">Batch weight in Kgs.</label>
+            <input id="batchwt" name="batchwt" value="2200">
+        </div>
+        <div>
+            <label for="actclay">Active clay</label>
+            <input id="actclay" name="actclay" value="10.5">
+        </div>
+        <div>
+            <label for="loi">Loss on ignition</label>
+            <input id="loi" name="loi" value="5.1">
+        </div>
+    </div>
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <div>
+                        <th>Pattern number</th>
+                        <th>Tree weight in Kgs</th>
+                        <th>Weight of cores per mould in Kgs</th>
+                        <th>Thickness of mould in mm</th>
+                        <th>No. of moulds</th>
+                    </div>
+                    <div>
+                        <th>Refreshing</th>
+                        <th>Spec. use of bentonite</th>
+                        <th>Spec. use of coal dust</th>
+                    </div>
+                    <div>
+                        <th>New sand weight to be set per batch</th>
+                        <th>Bentonite weight to be set per batch</th>
+                        <th>Coke dust weight to be set per batch</th>
+                    </div>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <div>
+                        <td><input id="pattern" type="pattern"</td>
+                        <td><input id="treewt" type="treewt" onchange="calcvolume()"></td>
+                        <td><input id="coreswt" type="coreswt" onchange="calcvolume()"></td>
+                        <td><input id="mouldthickness" type="mouldthickness" onchange="calcvolume()"></td>
+                        <td><input id="moulds" type="moulds" onchange="calcvolume()"></td>
+                    </div>
+                    <div>
+                        <td><input id="refreshing" type="refreshing" onchange="calcvolume()"></td>
+                        <td><input id="bentspec" type="bentspec" onchange="calcvolume()"></td>
+                        <td><input id="coalspec" type="coalspec" onchange="calcvolume()"></td>
+                    </div>
+                    <div>
+                        <td><input id="calcnewsand" type="calcnewsand"></td>
+                        <td><input id="calcbent" type="calcbent"></td>
+                        <td><input id="calccoal" type="calccoal"></td>
+                    </div>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
