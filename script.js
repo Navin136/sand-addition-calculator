@@ -1,8 +1,3 @@
-
-
-
-
-
 function calcvolume(){
     // common parameters
     let chamberheight = document.getElementById("chamberheight").value/1000;
@@ -18,16 +13,12 @@ function calcvolume(){
     let refreshing = document.getElementById("refreshing").value;
     let bentspec = document.getElementById("bentspec").value;
     let coalspec = document.getElementById("coalspec").value;
-    
     let volume = chamberheight*chamberwidth*mouldthickness*1500;
     let smratio = 0.21*treewt;
-
     let actmouldweight = volume-smratio;
     let mouldsperbatch = batchwt/actmouldweight;
-    console.log(mouldsperbatch);
     let moulds = document.getElementById("moulds").value;
     let batchesreq = (Number(moulds) + moulds*0.04)/mouldsperbatch;
-    let rtnsndcon = batchwt*batchesreq;
     let ironwt  = moulds*treewt;
     let coredil = (coreswt*(Number(moulds) + moulds*0.04))*0.7;
     let newsand = ((refreshing*ironwt)/1000)-coredil;
@@ -36,9 +27,6 @@ function calcvolume(){
     let calcnewsand = newsand/batchesreq;
     let calcbent = bentonite/batchesreq;
     let calccoal = coaldust/batchesreq;
-    console.log(calcnewsand);  
-    console.log(calcbent);  
-    console.log(calccoal);  
 
 // final result
 document.getElementById("calcnewsand").value = calcnewsand.toFixed(0);
